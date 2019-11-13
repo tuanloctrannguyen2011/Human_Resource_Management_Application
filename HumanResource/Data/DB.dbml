@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HumanResource_V4" Class="DBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-A59E3GV;Initial Catalog=HumanResource_V4;Persist Security Info=True;User ID=sa" SettingsObjectName="Data.Properties.Settings" SettingsPropertyName="HumanResource_V4ConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Account" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="acc_id" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="Char(300) NOT NULL" CanBeNull="false" />
+      <Column Name="role_name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Staff_Account" Member="Staff" ThisKey="acc_id" OtherKey="staff_id" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contract" Member="Contracts">
+    <Type Name="Contract">
+      <Column Name="contract_id" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="contract_name" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="shift_id" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="job_id" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="dept_id" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="salary" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="begin_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="end_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Contract_Staff_Contract" Member="Staff_Contracts" ThisKey="contract_id" OtherKey="contract_id" Type="Staff_Contract" />
+      <Association Name="Department_Contract" Member="Department" ThisKey="dept_id" OtherKey="dept_id" Type="Department" IsForeignKey="true" />
+      <Association Name="JobTitle_Contract" Member="JobTitle" ThisKey="job_id" OtherKey="job_id" Type="JobTitle" IsForeignKey="true" />
+      <Association Name="Shift_Contract" Member="Shift" ThisKey="shift_id" OtherKey="shift_id" Type="Shift" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Department" Member="Departments">
+    <Type Name="Department">
+      <Column Name="dept_id" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="dept_name" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="Department_Contract" Member="Contracts" ThisKey="dept_id" OtherKey="dept_id" Type="Contract" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Evaluation" Member="Evaluations">
+    <Type Name="Evaluation">
+      <Column Name="eva_id" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="eva_type" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="eva_desc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="staff_id" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="eva_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Staff_Evaluation" Member="Staff" ThisKey="staff_id" OtherKey="staff_id" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobTitle" Member="JobTitles">
+    <Type Name="JobTitle">
+      <Column Name="job_id" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="job_name" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="job_desc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="JobTitle_Contract" Member="Contracts" ThisKey="job_id" OtherKey="job_id" Type="Contract" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Notification" Member="Notifications">
+    <Type Name="Notification">
+      <Column Name="noti_id" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="noti_desc" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Shift" Member="Shifts">
+    <Type Name="Shift">
+      <Column Name="shift_id" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="shift_time" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Shift_Contract" Member="Contracts" ThisKey="shift_id" OtherKey="shift_id" Type="Contract" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Staff" Member="Staffs">
+    <Type Name="Staff">
+      <Column Name="staff_id" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="staff_name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="staff_gender" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="staff_birthdate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="staff_phoneNo" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
+      <Column Name="staff_mail" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="staff_address" Type="System.String" DbType="Char(200) NOT NULL" CanBeNull="false" />
+      <Column Name="staff_status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Staff_Account" Member="Account" ThisKey="staff_id" OtherKey="acc_id" Type="Account" Cardinality="One" />
+      <Association Name="Staff_Evaluation" Member="Evaluations" ThisKey="staff_id" OtherKey="staff_id" Type="Evaluation" />
+      <Association Name="Staff_Staff_Contract" Member="Staff_Contracts" ThisKey="staff_id" OtherKey="staff_id" Type="Staff_Contract" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Staff_Contract" Member="Staff_Contracts">
+    <Type Name="Staff_Contract">
+      <Column Name="staff_id" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="contract_id" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Contract_Staff_Contract" Member="Contract" ThisKey="contract_id" OtherKey="contract_id" Type="Contract" IsForeignKey="true" />
+      <Association Name="Staff_Staff_Contract" Member="Staff" ThisKey="staff_id" OtherKey="staff_id" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

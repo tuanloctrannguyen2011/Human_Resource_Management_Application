@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9E1207C-04DE-43B6-AF24-116BE1B09528}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Presentation</RootNamespace>
+    <AssemblyName>Presentation</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevOne.Security.Cryptography.BCrypt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.1.0.0.0\lib\DevOne.Security.Cryptography.BCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfoExtended, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Button_HinhTron.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Frm_Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Backup.Designer.cs">
+      <DependentUpon>Frm_Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_CongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_CongViec.Designer.cs">
+      <DependentUpon>Frm_CongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Danhgia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Danhgia.Designer.cs">
+      <DependentUpon>Frm_Danhgia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DoiMatKhau.Designer.cs">
+      <DependentUpon>Frm_DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_GiaiQuyetNghiViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_GiaiQuyetNghiViec.Designer.cs">
+      <DependentUpon>Frm_GiaiQuyetNghiViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Main.Designer.cs">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_PhanQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_PhanQuyen.Designer.cs">
+      <DependentUpon>Frm_PhanQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Restore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Restore.Designer.cs">
+      <DependentUpon>Frm_Restore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_PhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_PhongBan.Designer.cs">
+      <DependentUpon>Frm_PhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_staff.Designer.cs">
+      <DependentUpon>Frm_staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ThemNhanVien.Designer.cs">
+      <DependentUpon>Frm_ThemNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ThongTinCaNhan.Designer.cs">
+      <DependentUpon>Frm_ThongTinCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ThongTinPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ThongTinPhongBan.Designer.cs">
+      <DependentUpon>Frm_ThongTinPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gardient_Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_Backup.resx">
+      <DependentUpon>Frm_Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_CongViec.resx">
+      <DependentUpon>Frm_CongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Danhgia.resx">
+      <DependentUpon>Frm_Danhgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_DoiMatKhau.resx">
+      <DependentUpon>Frm_DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_GiaiQuyetNghiViec.resx">
+      <DependentUpon>Frm_GiaiQuyetNghiViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Main.resx">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_PhanQuyen.resx">
+      <DependentUpon>Frm_PhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Restore.resx">
+      <DependentUpon>Frm_Restore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_PhongBan.resx">
+      <DependentUpon>Frm_PhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_staff.resx">
+      <DependentUpon>Frm_staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ThemNhanVien.resx">
+      <DependentUpon>Frm_ThemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ThongTinCaNhan.resx">
+      <DependentUpon>Frm_ThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ThongTinPhongBan.resx">
+      <DependentUpon>Frm_ThongTinPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{377ecc4d-1a8b-4904-ba06-b8d36bb5eb73}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{894df0ee-f484-4002-b540-5f201dedc527}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8-cancel-64.png" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\button-round-cancel-icon.png" />
+    <Content Include="Images\button-round-dark-arrow-right-icon.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\department.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\Global-Manager-icon.png" />
+    <Content Include="Images\goals.png" />
+    <Content Include="Images\help.png" />
+    <Content Include="Images\iamge_child.png" />
+    <Content Include="Images\iamge_root.png" />
+    <Content Include="Images\icons8-add-property-64.png" />
+    <Content Include="Images\icons8-admin-settings-male-96 - Copy.png" />
+    <Content Include="Images\icons8-cancel-64.png" />
+    <Content Include="Images\icons8-car-service-96.png" />
+    <Content Include="Images\icons8-collaborator-female-100.png" />
+    <Content Include="Images\icons8-delete-message-64.png" />
+    <Content Include="Images\icons8-list-128.png" />
+    <Content Include="Images\icons8-pull-down-100.png" />
+    <Content Include="Images\icons8-return-64.png" />
+    <Content Include="Images\icons8-save-as-128.png" />
+    <Content Include="Images\icons8-search-128.png" />
+    <Content Include="Images\icons8-windows-client-100.png" />
+    <Content Include="Images\ID_ICON.png" />
+    <Content Include="Images\info.png" />
+    <Content Include="Images\job-search.png" />
+    <Content Include="Images\job.png" />
+    <Content Include="Images\line_background_band_light_69088_1280x1024.jpg" />
+    <Content Include="Images\list.png" />
+    <Content Include="Images\Login-icon.png" />
+    <Content Include="Images\man.png" />
+    <Content Include="Images\Manager-icon.png" />
+    <Content Include="Images\permission.png" />
+    <Content Include="Images\pull-down-64.png" />
+    <Content Include="Images\question.png" />
+    <Content Include="Images\rank.png" />
+    <Content Include="Images\Register-icon.png" />
+    <Content Include="Images\sort.png" />
+    <Content Include="Images\System-settings-icon.png" />
+    <Content Include="Images\System.png" />
+    <Content Include="Images\update.png" />
+    <None Include="Resources\icon_cancel.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
