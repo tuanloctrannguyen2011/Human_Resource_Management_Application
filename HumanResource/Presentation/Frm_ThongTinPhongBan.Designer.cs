@@ -31,19 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.GroupBox groupBox4;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ThongTinPhongBan));
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.imageList_tree = new System.Windows.Forms.ImageList(this.components);
-            this.smallimage = new System.Windows.Forms.ImageList(this.components);
-            this.bigimage = new System.Windows.Forms.ImageList(this.components);
-            this.toolStripMenuItem_option_tenNV = new System.Windows.Forms.ToolStripMenuItem();
-            this.gardient_Panel1 = new Presentation.Gardient_Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_exit = new System.Windows.Forms.Button();
-            this.gardient_Panel2 = new Presentation.Gardient_Panel();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.gardient_Panel6 = new Presentation.Gardient_Panel();
-            this.grb_DSPhongBan = new System.Windows.Forms.GroupBox();
-            this.gardient_Panel3 = new Presentation.Gardient_Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -59,6 +46,15 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.gardient_Panel1 = new Presentation.Gardient_Panel();
+            this.lbl_title = new System.Windows.Forms.Label();
+            this.btn_exit = new System.Windows.Forms.Button();
+            this.gardient_Panel2 = new Presentation.Gardient_Panel();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.gardient_Panel6 = new Presentation.Gardient_Panel();
+            this.grb_DSPhongBan = new System.Windows.Forms.GroupBox();
+            this.gardient_Panel3 = new Presentation.Gardient_Panel();
             this.tvw_department = new System.Windows.Forms.TreeView();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.gardient_Panel4 = new Presentation.Gardient_Panel();
@@ -101,7 +97,14 @@
             this.tbx_birthdate = new System.Windows.Forms.TextBox();
             this.tbx_gender = new System.Windows.Forms.TextBox();
             this.tbx_name = new System.Windows.Forms.TextBox();
+            this.imageList_tree = new System.Windows.Forms.ImageList(this.components);
+            this.smallimage = new System.Windows.Forms.ImageList(this.components);
+            this.bigimage = new System.Windows.Forms.ImageList(this.components);
+            this.toolStripMenuItem_option_tenNV = new System.Windows.Forms.ToolStripMenuItem();
             groupBox4 = new System.Windows.Forms.GroupBox();
+            groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -115,9 +118,6 @@
             this.gardient_Panel6.SuspendLayout();
             this.grb_DSPhongBan.SuspendLayout();
             this.gardient_Panel3.SuspendLayout();
-            groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -129,6 +129,160 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // groupBox4
+            // 
+            groupBox4.BackColor = System.Drawing.Color.Transparent;
+            groupBox4.Controls.Add(this.pictureBox1);
+            groupBox4.Controls.Add(this.toolStrip1);
+            groupBox4.Controls.Add(this.txb_namepb);
+            groupBox4.Controls.Add(this.txb_soluongnv);
+            groupBox4.Controls.Add(this.txb_mspb);
+            groupBox4.Controls.Add(this.label14);
+            groupBox4.Controls.Add(this.label13);
+            groupBox4.Controls.Add(this.label11);
+            groupBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            groupBox4.ForeColor = System.Drawing.Color.Black;
+            groupBox4.Location = new System.Drawing.Point(0, 440);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new System.Drawing.Size(447, 240);
+            groupBox4.TabIndex = 1;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Thông tin phòng ban";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(9, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(112, 81);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.BackColor = System.Drawing.Color.Cyan;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1,
+            this.toolStripComboBox_option_search,
+            this.toolStripTextBox_content_search,
+            this.toolStripButton_search,
+            this.toolStripButton_xem_toan_bo_phong_ban});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 186);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(441, 51);
+            this.toolStrip1.TabIndex = 6;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mãSốPhòngBanToolStripMenuItem,
+            this.tênPhòngBanToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 48);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            // 
+            // mãSốPhòngBanToolStripMenuItem
+            // 
+            this.mãSốPhòngBanToolStripMenuItem.Name = "mãSốPhòngBanToolStripMenuItem";
+            this.mãSốPhòngBanToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.mãSốPhòngBanToolStripMenuItem.Text = "Mã số phòng ban";
+            this.mãSốPhòngBanToolStripMenuItem.Click += new System.EventHandler(this.mãSốPhòngBanToolStripMenuItem_Click);
+            // 
+            // tênPhòngBanToolStripMenuItem
+            // 
+            this.tênPhòngBanToolStripMenuItem.Name = "tênPhòngBanToolStripMenuItem";
+            this.tênPhòngBanToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.tênPhòngBanToolStripMenuItem.Text = "Tên phòng ban";
+            this.tênPhòngBanToolStripMenuItem.Click += new System.EventHandler(this.tênPhòngBanToolStripMenuItem_Click);
+            // 
+            // toolStripComboBox_option_search
+            // 
+            this.toolStripComboBox_option_search.Enabled = false;
+            this.toolStripComboBox_option_search.Name = "toolStripComboBox_option_search";
+            this.toolStripComboBox_option_search.Size = new System.Drawing.Size(121, 51);
+            // 
+            // toolStripTextBox_content_search
+            // 
+            this.toolStripTextBox_content_search.Name = "toolStripTextBox_content_search";
+            this.toolStripTextBox_content_search.Size = new System.Drawing.Size(100, 51);
+            this.toolStripTextBox_content_search.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStripTextBox_content_search_MouseDown);
+            // 
+            // toolStripButton_search
+            // 
+            this.toolStripButton_search.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton_search.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_search.Image")));
+            this.toolStripButton_search.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_search.Name = "toolStripButton_search";
+            this.toolStripButton_search.Size = new System.Drawing.Size(77, 48);
+            this.toolStripButton_search.Text = "Tìm kiếm";
+            this.toolStripButton_search.Click += new System.EventHandler(this.toolStripButton_search_Click);
+            // 
+            // toolStripButton_xem_toan_bo_phong_ban
+            // 
+            this.toolStripButton_xem_toan_bo_phong_ban.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_xem_toan_bo_phong_ban.Image")));
+            this.toolStripButton_xem_toan_bo_phong_ban.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_xem_toan_bo_phong_ban.Name = "toolStripButton_xem_toan_bo_phong_ban";
+            this.toolStripButton_xem_toan_bo_phong_ban.Size = new System.Drawing.Size(82, 48);
+            this.toolStripButton_xem_toan_bo_phong_ban.Text = "Danh sách";
+            this.toolStripButton_xem_toan_bo_phong_ban.Click += new System.EventHandler(this.toolStripButton_xem_toan_bo_phong_ban_Click);
+            // 
+            // txb_namepb
+            // 
+            this.txb_namepb.Location = new System.Drawing.Point(201, 73);
+            this.txb_namepb.Name = "txb_namepb";
+            this.txb_namepb.Size = new System.Drawing.Size(212, 26);
+            this.txb_namepb.TabIndex = 5;
+            // 
+            // txb_soluongnv
+            // 
+            this.txb_soluongnv.Location = new System.Drawing.Point(201, 114);
+            this.txb_soluongnv.Name = "txb_soluongnv";
+            this.txb_soluongnv.Size = new System.Drawing.Size(212, 26);
+            this.txb_soluongnv.TabIndex = 4;
+            // 
+            // txb_mspb
+            // 
+            this.txb_mspb.Location = new System.Drawing.Point(201, 27);
+            this.txb_mspb.Name = "txb_mspb";
+            this.txb_mspb.Size = new System.Drawing.Size(212, 26);
+            this.txb_mspb.TabIndex = 3;
+            // 
+            // label14
+            // 
+            this.label14.Location = new System.Drawing.Point(138, 78);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 21);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Tên";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label13
+            // 
+            this.label13.Location = new System.Drawing.Point(130, 27);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 21);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Mã số";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(40, 119);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(155, 21);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Số lượng nhân viên";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // splitContainer1
             // 
@@ -148,37 +302,11 @@
             this.splitContainer1.SplitterDistance = 37;
             this.splitContainer1.TabIndex = 0;
             // 
-            // imageList_tree
-            // 
-            this.imageList_tree.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_tree.ImageStream")));
-            this.imageList_tree.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList_tree.Images.SetKeyName(0, "iamge_root.png");
-            this.imageList_tree.Images.SetKeyName(1, "iamge_child.png");
-            // 
-            // smallimage
-            // 
-            this.smallimage.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("smallimage.ImageStream")));
-            this.smallimage.TransparentColor = System.Drawing.Color.Transparent;
-            this.smallimage.Images.SetKeyName(0, "icons8-collaborator-female-100.png");
-            // 
-            // bigimage
-            // 
-            this.bigimage.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("bigimage.ImageStream")));
-            this.bigimage.TransparentColor = System.Drawing.Color.Transparent;
-            this.bigimage.Images.SetKeyName(0, "icons8-collaborator-female-100.png");
-            // 
-            // toolStripMenuItem_option_tenNV
-            // 
-            this.toolStripMenuItem_option_tenNV.ForeColor = System.Drawing.Color.Black;
-            this.toolStripMenuItem_option_tenNV.Name = "toolStripMenuItem_option_tenNV";
-            this.toolStripMenuItem_option_tenNV.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem_option_tenNV.Text = "Tên nhân viên";
-            // 
             // gardient_Panel1
             // 
             this.gardient_Panel1.Angle = 0F;
             this.gardient_Panel1.BottomColor = System.Drawing.Color.DeepSkyBlue;
-            this.gardient_Panel1.Controls.Add(this.label1);
+            this.gardient_Panel1.Controls.Add(this.lbl_title);
             this.gardient_Panel1.Controls.Add(this.btn_exit);
             this.gardient_Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gardient_Panel1.Location = new System.Drawing.Point(0, 0);
@@ -187,18 +315,18 @@
             this.gardient_Panel1.TabIndex = 0;
             this.gardient_Panel1.TopColor = System.Drawing.Color.White;
             // 
-            // label1
+            // lbl_title
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1510, 37);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Phòng Ban";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_title.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_title.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title.ForeColor = System.Drawing.Color.Black;
+            this.lbl_title.Location = new System.Drawing.Point(0, 0);
+            this.lbl_title.Name = "lbl_title";
+            this.lbl_title.Size = new System.Drawing.Size(1510, 37);
+            this.lbl_title.TabIndex = 7;
+            this.lbl_title.Text = "Phòng Ban";
+            this.lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_exit
             // 
@@ -285,160 +413,6 @@
             this.gardient_Panel3.Size = new System.Drawing.Size(447, 680);
             this.gardient_Panel3.TabIndex = 0;
             this.gardient_Panel3.TopColor = System.Drawing.Color.White;
-            // 
-            // groupBox4
-            // 
-            groupBox4.BackColor = System.Drawing.Color.Transparent;
-            groupBox4.Controls.Add(this.pictureBox1);
-            groupBox4.Controls.Add(this.toolStrip1);
-            groupBox4.Controls.Add(this.txb_namepb);
-            groupBox4.Controls.Add(this.txb_soluongnv);
-            groupBox4.Controls.Add(this.txb_mspb);
-            groupBox4.Controls.Add(this.label14);
-            groupBox4.Controls.Add(this.label13);
-            groupBox4.Controls.Add(this.label11);
-            groupBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            groupBox4.ForeColor = System.Drawing.Color.Black;
-            groupBox4.Location = new System.Drawing.Point(0, 440);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new System.Drawing.Size(447, 240);
-            groupBox4.TabIndex = 1;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Thông tin phòng ban";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(9, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 81);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.AutoSize = false;
-            this.toolStrip1.BackColor = System.Drawing.Color.Cyan;
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1,
-            this.toolStripComboBox_option_search,
-            this.toolStripTextBox_content_search,
-            this.toolStripButton_search,
-            this.toolStripButton_xem_toan_bo_phong_ban});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 186);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(441, 51);
-            this.toolStrip1.TabIndex = 6;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mãSốPhòngBanToolStripMenuItem,
-            this.tênPhòngBanToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 48);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
-            // 
-            // mãSốPhòngBanToolStripMenuItem
-            // 
-            this.mãSốPhòngBanToolStripMenuItem.Name = "mãSốPhòngBanToolStripMenuItem";
-            this.mãSốPhòngBanToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-            this.mãSốPhòngBanToolStripMenuItem.Text = "Mã số phòng ban";
-            this.mãSốPhòngBanToolStripMenuItem.Click += new System.EventHandler(this.mãSốPhòngBanToolStripMenuItem_Click);
-            // 
-            // tênPhòngBanToolStripMenuItem
-            // 
-            this.tênPhòngBanToolStripMenuItem.Name = "tênPhòngBanToolStripMenuItem";
-            this.tênPhòngBanToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-            this.tênPhòngBanToolStripMenuItem.Text = "Tên phòng ban";
-            this.tênPhòngBanToolStripMenuItem.Click += new System.EventHandler(this.tênPhòngBanToolStripMenuItem_Click);
-            // 
-            // toolStripComboBox_option_search
-            // 
-            this.toolStripComboBox_option_search.Enabled = false;
-            this.toolStripComboBox_option_search.Name = "toolStripComboBox_option_search";
-            this.toolStripComboBox_option_search.Size = new System.Drawing.Size(121, 51);
-            // 
-            // toolStripTextBox_content_search
-            // 
-            this.toolStripTextBox_content_search.Name = "toolStripTextBox_content_search";
-            this.toolStripTextBox_content_search.Size = new System.Drawing.Size(100, 51);
-            this.toolStripTextBox_content_search.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStripTextBox_content_search_MouseDown);
-            // 
-            // toolStripButton_search
-            // 
-            this.toolStripButton_search.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton_search.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_search.Image")));
-            this.toolStripButton_search.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton_search.Name = "toolStripButton_search";
-            this.toolStripButton_search.Size = new System.Drawing.Size(77, 48);
-            this.toolStripButton_search.Text = "Tìm kiếm";
-            this.toolStripButton_search.Click += new System.EventHandler(this.toolStripButton_search_Click);
-            // 
-            // toolStripButton_xem_toan_bo_phong_ban
-            // 
-            this.toolStripButton_xem_toan_bo_phong_ban.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_xem_toan_bo_phong_ban.Image")));
-            this.toolStripButton_xem_toan_bo_phong_ban.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton_xem_toan_bo_phong_ban.Name = "toolStripButton_xem_toan_bo_phong_ban";
-            this.toolStripButton_xem_toan_bo_phong_ban.Size = new System.Drawing.Size(82, 48);
-            this.toolStripButton_xem_toan_bo_phong_ban.Text = "Danh sách";
-            this.toolStripButton_xem_toan_bo_phong_ban.Click += new System.EventHandler(this.toolStripButton_xem_toan_bo_phong_ban_Click);
-            // 
-            // txb_namepb
-            // 
-            this.txb_namepb.Location = new System.Drawing.Point(223, 73);
-            this.txb_namepb.Name = "txb_namepb";
-            this.txb_namepb.Size = new System.Drawing.Size(212, 26);
-            this.txb_namepb.TabIndex = 5;
-            // 
-            // txb_soluongnv
-            // 
-            this.txb_soluongnv.Location = new System.Drawing.Point(223, 114);
-            this.txb_soluongnv.Name = "txb_soluongnv";
-            this.txb_soluongnv.Size = new System.Drawing.Size(212, 26);
-            this.txb_soluongnv.TabIndex = 4;
-            // 
-            // txb_mspb
-            // 
-            this.txb_mspb.Location = new System.Drawing.Point(223, 27);
-            this.txb_mspb.Name = "txb_mspb";
-            this.txb_mspb.Size = new System.Drawing.Size(212, 26);
-            this.txb_mspb.TabIndex = 3;
-            // 
-            // label14
-            // 
-            this.label14.Location = new System.Drawing.Point(160, 78);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(57, 21);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Tên";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label13
-            // 
-            this.label13.Location = new System.Drawing.Point(152, 27);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 21);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Mã số";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label11
-            // 
-            this.label11.Location = new System.Drawing.Point(62, 119);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(155, 21);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Số lượng nhân viên";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tvw_department
             // 
@@ -675,16 +649,18 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(311, 228);
+            this.label15.Location = new System.Drawing.Point(284, 229);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(73, 20);
             this.label15.TabIndex = 31;
             this.label15.Text = "Đánh giá";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lsv_danhgia
             // 
+            this.lsv_danhgia.Enabled = false;
             this.lsv_danhgia.HideSelection = false;
-            this.lsv_danhgia.Location = new System.Drawing.Point(410, 228);
+            this.lsv_danhgia.Location = new System.Drawing.Point(405, 228);
             this.lsv_danhgia.Name = "lsv_danhgia";
             this.lsv_danhgia.Size = new System.Drawing.Size(628, 118);
             this.lsv_danhgia.TabIndex = 30;
@@ -696,7 +672,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(18, 24);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(251, 279);
+            this.pictureBox2.Size = new System.Drawing.Size(187, 222);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -704,9 +680,10 @@
             // tbx_congviec
             // 
             this.tbx_congviec.BackColor = System.Drawing.Color.LightBlue;
+            this.tbx_congviec.Enabled = false;
             this.tbx_congviec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_congviec.ForeColor = System.Drawing.Color.White;
-            this.tbx_congviec.Location = new System.Drawing.Point(790, 91);
+            this.tbx_congviec.Location = new System.Drawing.Point(752, 91);
             this.tbx_congviec.Multiline = true;
             this.tbx_congviec.Name = "tbx_congviec";
             this.tbx_congviec.Size = new System.Drawing.Size(203, 33);
@@ -715,9 +692,10 @@
             // tbx_calamviec
             // 
             this.tbx_calamviec.BackColor = System.Drawing.Color.LightBlue;
+            this.tbx_calamviec.Enabled = false;
             this.tbx_calamviec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_calamviec.ForeColor = System.Drawing.Color.White;
-            this.tbx_calamviec.Location = new System.Drawing.Point(790, 131);
+            this.tbx_calamviec.Location = new System.Drawing.Point(752, 131);
             this.tbx_calamviec.Multiline = true;
             this.tbx_calamviec.Name = "tbx_calamviec";
             this.tbx_calamviec.Size = new System.Drawing.Size(203, 33);
@@ -727,7 +705,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(671, 134);
+            this.label10.Location = new System.Drawing.Point(633, 134);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 20);
             this.label10.TabIndex = 21;
@@ -737,7 +715,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(682, 94);
+            this.label8.Location = new System.Drawing.Point(644, 94);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 20);
             this.label8.TabIndex = 19;
@@ -757,7 +735,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(703, 54);
+            this.label9.Location = new System.Drawing.Point(665, 54);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 20);
             this.label9.TabIndex = 16;
@@ -767,9 +745,10 @@
             // tbx_address
             // 
             this.tbx_address.BackColor = System.Drawing.Color.LightBlue;
+            this.tbx_address.Enabled = false;
             this.tbx_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_address.ForeColor = System.Drawing.Color.White;
-            this.tbx_address.Location = new System.Drawing.Point(790, 52);
+            this.tbx_address.Location = new System.Drawing.Point(752, 52);
             this.tbx_address.Multiline = true;
             this.tbx_address.Name = "tbx_address";
             this.tbx_address.Size = new System.Drawing.Size(203, 33);
@@ -779,7 +758,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(712, 12);
+            this.label7.Location = new System.Drawing.Point(674, 12);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 20);
             this.label7.TabIndex = 13;
@@ -790,7 +769,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(282, 172);
+            this.label6.Location = new System.Drawing.Point(255, 173);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 20);
             this.label6.TabIndex = 12;
@@ -801,7 +780,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(306, 131);
+            this.label5.Location = new System.Drawing.Point(279, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 20);
             this.label5.TabIndex = 11;
@@ -812,7 +791,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(317, 91);
+            this.label4.Location = new System.Drawing.Point(290, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 20);
             this.label4.TabIndex = 10;
@@ -823,7 +802,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(270, 52);
+            this.label3.Location = new System.Drawing.Point(243, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 20);
             this.label3.TabIndex = 9;
@@ -834,7 +813,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(358, 12);
+            this.label2.Location = new System.Drawing.Point(331, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 20);
             this.label2.TabIndex = 8;
@@ -844,9 +823,10 @@
             // tbx_email
             // 
             this.tbx_email.BackColor = System.Drawing.Color.LightBlue;
+            this.tbx_email.Enabled = false;
             this.tbx_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_email.ForeColor = System.Drawing.Color.White;
-            this.tbx_email.Location = new System.Drawing.Point(789, 9);
+            this.tbx_email.Location = new System.Drawing.Point(751, 9);
             this.tbx_email.Multiline = true;
             this.tbx_email.Name = "tbx_email";
             this.tbx_email.Size = new System.Drawing.Size(203, 33);
@@ -855,9 +835,10 @@
             // tbx_id
             // 
             this.tbx_id.BackColor = System.Drawing.Color.LightBlue;
+            this.tbx_id.Enabled = false;
             this.tbx_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_id.ForeColor = System.Drawing.Color.White;
-            this.tbx_id.Location = new System.Drawing.Point(438, 9);
+            this.tbx_id.Location = new System.Drawing.Point(406, 9);
             this.tbx_id.Multiline = true;
             this.tbx_id.Name = "tbx_id";
             this.tbx_id.Size = new System.Drawing.Size(203, 33);
@@ -866,9 +847,10 @@
             // tbx_sdt
             // 
             this.tbx_sdt.BackColor = System.Drawing.Color.LightBlue;
+            this.tbx_sdt.Enabled = false;
             this.tbx_sdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_sdt.ForeColor = System.Drawing.Color.White;
-            this.tbx_sdt.Location = new System.Drawing.Point(438, 171);
+            this.tbx_sdt.Location = new System.Drawing.Point(406, 171);
             this.tbx_sdt.Multiline = true;
             this.tbx_sdt.Name = "tbx_sdt";
             this.tbx_sdt.Size = new System.Drawing.Size(203, 33);
@@ -877,9 +859,10 @@
             // tbx_birthdate
             // 
             this.tbx_birthdate.BackColor = System.Drawing.Color.LightBlue;
+            this.tbx_birthdate.Enabled = false;
             this.tbx_birthdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_birthdate.ForeColor = System.Drawing.Color.White;
-            this.tbx_birthdate.Location = new System.Drawing.Point(438, 130);
+            this.tbx_birthdate.Location = new System.Drawing.Point(406, 130);
             this.tbx_birthdate.Multiline = true;
             this.tbx_birthdate.Name = "tbx_birthdate";
             this.tbx_birthdate.Size = new System.Drawing.Size(203, 33);
@@ -888,9 +871,10 @@
             // tbx_gender
             // 
             this.tbx_gender.BackColor = System.Drawing.Color.LightBlue;
+            this.tbx_gender.Enabled = false;
             this.tbx_gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_gender.ForeColor = System.Drawing.Color.White;
-            this.tbx_gender.Location = new System.Drawing.Point(438, 90);
+            this.tbx_gender.Location = new System.Drawing.Point(406, 90);
             this.tbx_gender.Multiline = true;
             this.tbx_gender.Name = "tbx_gender";
             this.tbx_gender.Size = new System.Drawing.Size(203, 33);
@@ -899,13 +883,40 @@
             // tbx_name
             // 
             this.tbx_name.BackColor = System.Drawing.Color.LightBlue;
+            this.tbx_name.Enabled = false;
             this.tbx_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_name.ForeColor = System.Drawing.Color.White;
-            this.tbx_name.Location = new System.Drawing.Point(438, 50);
+            this.tbx_name.Location = new System.Drawing.Point(406, 50);
             this.tbx_name.Multiline = true;
             this.tbx_name.Name = "tbx_name";
             this.tbx_name.Size = new System.Drawing.Size(203, 33);
             this.tbx_name.TabIndex = 2;
+            // 
+            // imageList_tree
+            // 
+            this.imageList_tree.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_tree.ImageStream")));
+            this.imageList_tree.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList_tree.Images.SetKeyName(0, "iamge_root.png");
+            this.imageList_tree.Images.SetKeyName(1, "iamge_child.png");
+            // 
+            // smallimage
+            // 
+            this.smallimage.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("smallimage.ImageStream")));
+            this.smallimage.TransparentColor = System.Drawing.Color.Transparent;
+            this.smallimage.Images.SetKeyName(0, "icons8-collaborator-female-100.png");
+            // 
+            // bigimage
+            // 
+            this.bigimage.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("bigimage.ImageStream")));
+            this.bigimage.TransparentColor = System.Drawing.Color.Transparent;
+            this.bigimage.Images.SetKeyName(0, "icons8-collaborator-female-100.png");
+            // 
+            // toolStripMenuItem_option_tenNV
+            // 
+            this.toolStripMenuItem_option_tenNV.ForeColor = System.Drawing.Color.Black;
+            this.toolStripMenuItem_option_tenNV.Name = "toolStripMenuItem_option_tenNV";
+            this.toolStripMenuItem_option_tenNV.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_option_tenNV.Text = "Tên nhân viên";
             // 
             // Frm_ThongTinPhongBan
             // 
@@ -916,6 +927,11 @@
             this.Name = "Frm_ThongTinPhongBan";
             this.Text = "Frm_LanhDao_PhongBan";
             this.Load += new System.EventHandler(this.Frm_ThongTinPhongBan_Load);
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -930,11 +946,6 @@
             this.grb_DSPhongBan.ResumeLayout(false);
             this.grb_DSPhongBan.PerformLayout();
             this.gardient_Panel3.ResumeLayout(false);
-            groupBox4.ResumeLayout(false);
-            groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
             this.splitContainer3.Panel2.PerformLayout();
@@ -957,7 +968,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private Gardient_Panel gardient_Panel1;
         private Gardient_Panel gardient_Panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private Gardient_Panel gardient_Panel3;
         private System.Windows.Forms.TreeView tvw_department;

@@ -401,42 +401,42 @@
             this.phòngBanToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phòngBanToolStripMenuItem.ForeColor = System.Drawing.Color.Gray;
             this.phòngBanToolStripMenuItem.Name = "phòngBanToolStripMenuItem";
-            this.phòngBanToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.phòngBanToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.phòngBanToolStripMenuItem.Text = "Phòng Ban";
             this.phòngBanToolStripMenuItem.Click += new System.EventHandler(this.phòngBanToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(162, 6);
             // 
             // nhânViênToolStripMenuItem1
             // 
             this.nhânViênToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nhânViênToolStripMenuItem1.ForeColor = System.Drawing.Color.Gray;
             this.nhânViênToolStripMenuItem1.Name = "nhânViênToolStripMenuItem1";
-            this.nhânViênToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.nhânViênToolStripMenuItem1.Size = new System.Drawing.Size(165, 26);
             this.nhânViênToolStripMenuItem1.Text = "Nhân viên";
             this.nhânViênToolStripMenuItem1.Click += new System.EventHandler(this.nhânViênToolStripMenuItem1_Click);
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(162, 6);
             // 
             // côngViệcToolStripMenuItem
             // 
             this.côngViệcToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.côngViệcToolStripMenuItem.ForeColor = System.Drawing.Color.Gray;
             this.côngViệcToolStripMenuItem.Name = "côngViệcToolStripMenuItem";
-            this.côngViệcToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.côngViệcToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.côngViệcToolStripMenuItem.Text = "Công việc";
             this.côngViệcToolStripMenuItem.Click += new System.EventHandler(this.côngViệcToolStripMenuItem_Click);
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(162, 6);
             // 
             // nhânViênToolStripMenuItem
             // 
@@ -483,6 +483,7 @@
             this.hướngDẫnSửDụngPhậnMềmToolStripMenuItem.Name = "hướngDẫnSửDụngPhậnMềmToolStripMenuItem";
             this.hướngDẫnSửDụngPhậnMềmToolStripMenuItem.Size = new System.Drawing.Size(320, 26);
             this.hướngDẫnSửDụngPhậnMềmToolStripMenuItem.Text = "Hướng dẫn sử dụng phận mềm";
+            this.hướngDẫnSửDụngPhậnMềmToolStripMenuItem.Click += new System.EventHandler(this.hướngDẫnSửDụngPhậnMềmToolStripMenuItem_Click);
             // 
             // toolStripSeparator12
             // 

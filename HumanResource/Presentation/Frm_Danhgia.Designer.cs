@@ -280,35 +280,35 @@
             // chiTiêtToolStripMenuItem
             // 
             this.chiTiêtToolStripMenuItem.Name = "chiTiêtToolStripMenuItem";
-            this.chiTiêtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.chiTiêtToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.chiTiêtToolStripMenuItem.Text = "List";
             this.chiTiêtToolStripMenuItem.Click += new System.EventHandler(this.chiTiêtToolStripMenuItem_Click);
             // 
             // largeIconToolStripMenuItem
             // 
             this.largeIconToolStripMenuItem.Name = "largeIconToolStripMenuItem";
-            this.largeIconToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.largeIconToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.largeIconToolStripMenuItem.Text = "LargeIcon";
             this.largeIconToolStripMenuItem.Click += new System.EventHandler(this.largeIconToolStripMenuItem_Click);
             // 
             // detailToolStripMenuItem
             // 
             this.detailToolStripMenuItem.Name = "detailToolStripMenuItem";
-            this.detailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.detailToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.detailToolStripMenuItem.Text = "Detail";
             this.detailToolStripMenuItem.Click += new System.EventHandler(this.detailToolStripMenuItem_Click);
             // 
             // titleToolStripMenuItem
             // 
             this.titleToolStripMenuItem.Name = "titleToolStripMenuItem";
-            this.titleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.titleToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.titleToolStripMenuItem.Text = "Title";
             this.titleToolStripMenuItem.Click += new System.EventHandler(this.titleToolStripMenuItem_Click);
             // 
             // smallIconToolStripMenuItem
             // 
             this.smallIconToolStripMenuItem.Name = "smallIconToolStripMenuItem";
-            this.smallIconToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.smallIconToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.smallIconToolStripMenuItem.Text = "SmallIcon";
             this.smallIconToolStripMenuItem.Click += new System.EventHandler(this.smallIconToolStripMenuItem_Click);
             // 
@@ -413,10 +413,10 @@
             this.grb_danhgia.Controls.Add(this.label3);
             this.grb_danhgia.Controls.Add(this.label5);
             this.grb_danhgia.Controls.Add(this.label4);
-            this.grb_danhgia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grb_danhgia.Dock = System.Windows.Forms.DockStyle.Top;
             this.grb_danhgia.Location = new System.Drawing.Point(0, 0);
             this.grb_danhgia.Name = "grb_danhgia";
-            this.grb_danhgia.Size = new System.Drawing.Size(637, 354);
+            this.grb_danhgia.Size = new System.Drawing.Size(637, 313);
             this.grb_danhgia.TabIndex = 16;
             this.grb_danhgia.TabStop = false;
             this.grb_danhgia.Text = "đánh giá";

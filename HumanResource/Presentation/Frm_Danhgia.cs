@@ -33,12 +33,10 @@ namespace Presentation
         {
             toolStripTextBox_content_search.Text = "nhập vào nội dung cần tìm kiếm";
             toolStripTextBox_content_search.ForeColor = Color.DeepSkyBlue;
-            // toolStripComboBox_optionseearch.ComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            //  string[] array_option_search = new string[] { "Mã nhân viên", "Tên nhân viên", "Mã Phòng ban", "Tên Phòng ban", "Địa chỉ" };
-            // toolStripComboBox_optionseearch.ComboBox.DataSource = array_option_search;
+           
             innit_listview(lsv_staff);
 
-            list_staff = cls_staff_bus1.Get_list_staff_BUS();
+            list_staff = cls_staff_bus1.Get_list_staff_load_form_BUS(account_curent.Id_acc.Trim());
             Load_to_list_view(lsv_staff, list_staff);
             innit_listview_danhgia(lstviewdanhgia);
 

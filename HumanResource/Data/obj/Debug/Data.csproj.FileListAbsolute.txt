@@ -9,6 +9,17 @@ D:\A_HK1N3\Phat_Trien_Ung_Dung\HumanResource_DA\HumanResource\Data\bin\Debug\Ent
 D:\A_HK1N3\Phat_Trien_Ung_Dung\HumanResource_DA\HumanResource\Data\bin\Debug\Entity.pdb
 D:\A_HK1N3\Phat_Trien_Ung_Dung\HumanResource_DA\HumanResource\Data\obj\Debug\Data.csproj.CopyComplete
 D:\A_HK1N3\Phat_Trien_Ung_Dung\HumanResource_DA\HumanResource\Data\bin\Debug\DevOne.Security.Cryptography.BCrypt.dll
+D:\A_final_phat_trien_ung_dung\HumanResource_DA\HumanResource\Data\bin\Debug\Data.dll.config
+D:\A_final_phat_trien_ung_dung\HumanResource_DA\HumanResource\Data\bin\Debug\Data.dll
+D:\A_final_phat_trien_ung_dung\HumanResource_DA\HumanResource\Data\bin\Debug\Data.pdb
+D:\A_final_phat_trien_ung_dung\HumanResource_DA\HumanResource\Data\bin\Debug\DevOne.Security.Cryptography.BCrypt.dll
+D:\A_final_phat_trien_ung_dung\HumanResource_DA\HumanResource\Data\bin\Debug\Entity.dll
+D:\A_final_phat_trien_ung_dung\HumanResource_DA\HumanResource\Data\bin\Debug\Entity.pdb
+D:\A_final_phat_trien_ung_dung\HumanResource_DA\HumanResource\Data\obj\Debug\Data.csprojAssemblyReference.cache
+D:\A_final_phat_trien_ung_dung\HumanResource_DA\HumanResource\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+D:\A_final_phat_trien_ung_dung\HumanResource_DA\HumanResource\Data\obj\Debug\Data.csproj.CopyComplete
+D:\A_final_phat_trien_ung_dung\HumanResource_DA\HumanResource\Data\obj\Debug\Data.dll
+D:\A_final_phat_trien_ung_dung\HumanResource_DA\HumanResource\Data\obj\Debug\Data.pdb
 E:\HumanResource_DA\HumanResource\Data\bin\Debug\Data.dll.config
 E:\HumanResource_DA\HumanResource\Data\bin\Debug\Data.dll
 E:\HumanResource_DA\HumanResource\Data\bin\Debug\Data.pdb

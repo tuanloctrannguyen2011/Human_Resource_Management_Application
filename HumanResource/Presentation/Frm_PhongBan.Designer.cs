@@ -37,6 +37,7 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.gardient_Panel3 = new Presentation.Gardient_Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bindingNavigator_department = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -82,7 +83,6 @@
             this.toolStripButton_cap_nhat_thong_tin_pb = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_luu_thong_tin_phong_ban = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_xem_toan_bo_phong_ban = new System.Windows.Forms.ToolStripButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -94,6 +94,7 @@
             this.splitContainer2.SuspendLayout();
             this.gardient_Panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator_department)).BeginInit();
             this.bindingNavigator_department.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grv_department)).BeginInit();
@@ -110,7 +111,6 @@
             this.groupBox2.SuspendLayout();
             this.grb_thong_tin_phong_ban_moi.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -169,7 +169,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1043, 39);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Thêm mới một phong ban";
+            this.label1.Text = "Phòng ban";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // splitContainer2
@@ -217,6 +217,17 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách phòng ban";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 277);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(341, 325);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // bindingNavigator_department
             // 
@@ -634,6 +645,7 @@
             this.toolStripButton_search.Name = "toolStripButton_search";
             this.toolStripButton_search.Size = new System.Drawing.Size(77, 48);
             this.toolStripButton_search.Text = "Tìm kiếm";
+            this.toolStripButton_search.ToolTipText = "Tìm kiếm phòng ban";
             this.toolStripButton_search.Click += new System.EventHandler(this.toolStripButton_search_Click);
             // 
             // toolStripButton_Them_moi_phong_ban
@@ -643,6 +655,7 @@
             this.toolStripButton_Them_moi_phong_ban.Name = "toolStripButton_Them_moi_phong_ban";
             this.toolStripButton_Them_moi_phong_ban.Size = new System.Drawing.Size(57, 48);
             this.toolStripButton_Them_moi_phong_ban.Text = "Thêm";
+            this.toolStripButton_Them_moi_phong_ban.ToolTipText = "Thêm phòng ban";
             this.toolStripButton_Them_moi_phong_ban.Click += new System.EventHandler(this.toolStripButton_Them_moi_phong_ban_Click);
             // 
             // toolStripButton_delete_Phong_Ban
@@ -652,6 +665,7 @@
             this.toolStripButton_delete_Phong_Ban.Name = "toolStripButton_delete_Phong_Ban";
             this.toolStripButton_delete_Phong_Ban.Size = new System.Drawing.Size(47, 48);
             this.toolStripButton_delete_Phong_Ban.Text = "Xóa";
+            this.toolStripButton_delete_Phong_Ban.ToolTipText = "Xóa phòng ban";
             this.toolStripButton_delete_Phong_Ban.Click += new System.EventHandler(this.toolStripButton_delete_Phong_Ban_Click);
             // 
             // toolStripButton_cap_nhat_thong_tin_pb
@@ -661,6 +675,7 @@
             this.toolStripButton_cap_nhat_thong_tin_pb.Name = "toolStripButton_cap_nhat_thong_tin_pb";
             this.toolStripButton_cap_nhat_thong_tin_pb.Size = new System.Drawing.Size(75, 48);
             this.toolStripButton_cap_nhat_thong_tin_pb.Text = "Cập nhật";
+            this.toolStripButton_cap_nhat_thong_tin_pb.ToolTipText = "Cập nhật phòng ban";
             this.toolStripButton_cap_nhat_thong_tin_pb.Click += new System.EventHandler(this.toolStripButton_cap_nhat_thong_tin_pb_Click);
             // 
             // toolStripButton_luu_thong_tin_phong_ban
@@ -670,6 +685,7 @@
             this.toolStripButton_luu_thong_tin_phong_ban.Name = "toolStripButton_luu_thong_tin_phong_ban";
             this.toolStripButton_luu_thong_tin_phong_ban.Size = new System.Drawing.Size(50, 48);
             this.toolStripButton_luu_thong_tin_phong_ban.Text = "Lưu ";
+            this.toolStripButton_luu_thong_tin_phong_ban.ToolTipText = "Lưu phòng ban";
             this.toolStripButton_luu_thong_tin_phong_ban.Click += new System.EventHandler(this.toolStripButton_luu_thong_tin_phong_ban_Click);
             // 
             // toolStripButton_xem_toan_bo_phong_ban
@@ -679,17 +695,8 @@
             this.toolStripButton_xem_toan_bo_phong_ban.Name = "toolStripButton_xem_toan_bo_phong_ban";
             this.toolStripButton_xem_toan_bo_phong_ban.Size = new System.Drawing.Size(82, 48);
             this.toolStripButton_xem_toan_bo_phong_ban.Text = "Danh sách";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 277);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(341, 325);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.toolStripButton_xem_toan_bo_phong_ban.ToolTipText = "Danh sách phòng ban";
+            this.toolStripButton_xem_toan_bo_phong_ban.Click += new System.EventHandler(this.toolStripButton_xem_toan_bo_phong_ban_Click);
             // 
             // Frm_PhongBan
             // 
@@ -712,6 +719,7 @@
             this.gardient_Panel3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator_department)).EndInit();
             this.bindingNavigator_department.ResumeLayout(false);
             this.bindingNavigator_department.PerformLayout();
@@ -733,7 +741,6 @@
             this.grb_thong_tin_phong_ban_moi.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

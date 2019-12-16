@@ -10,8 +10,7 @@ using System.Windows.Forms;
 using Entity;
 using Business;
 using DevOne.Security.Cryptography.BCrypt;
-
-
+using System.IO;
 
 namespace Presentation
 {
@@ -21,7 +20,62 @@ namespace Presentation
         public Frm_ThemNhanVien()
         {
             InitializeComponent();
+            txt_TNV.TextChanged += Txt_TNV_TextChanged;
+            txt_DiaChiEMAIL.TextChanged += Txt_DiaChiEMAIL_TextChanged;
+            dtp_ngaysinh.TextChanged += Dtp_ngaysinh_TextChanged;
+            txt_luong.TextChanged += Txt_luong_TextChanged;
+            
         }
+
+        private void Txt_luong_TextChanged(object sender, EventArgs e)
+        {
+            if (Cls_Validate_data.check_salary(txt_luong))
+            {
+                txt_luong.ForeColor = Color.Black;
+            }
+            else
+            {
+                txt_luong.ForeColor = Color.Red;
+            }
+            //throw new NotImplementedException();
+        }
+
+        private void Dtp_ngaysinh_TextChanged(object sender, EventArgs e)
+        {
+            if (!Cls_Validate_data.validate_datetime("birthday", dtp_ngaysinh.Value.ToLongDateString(), DateTime.Today.ToLongDateString()))
+            {
+                MessageBox.Show("Ngày sinh phỉa đảm bảo từ 18+ trở lên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            //throw new NotImplementedException();
+        }
+
+        private void Txt_DiaChiEMAIL_TextChanged(object sender, EventArgs e)
+        {
+            if (Cls_Validate_data.check_email(txt_DiaChiEMAIL))
+            {
+                txt_DiaChiEMAIL.ForeColor = Color.Black;
+            }
+            else
+            {
+                txt_DiaChiEMAIL.ForeColor = Color.Red;
+            }
+
+        }
+
+
+        private void Txt_TNV_TextChanged(object sender, EventArgs e)
+        {
+            if (Cls_Validate_data.check_name_staff(txt_TNV))
+            {
+                txt_TNV.ForeColor = Color.Black;
+            }
+            else
+            {
+                txt_TNV.ForeColor = Color.Red;
+            }
+            //throw new NotImplementedException();
+        }
+
         public Frm_ThemNhanVien(string id_curent)
         {
             InitializeComponent();
@@ -53,7 +107,9 @@ namespace Presentation
 
         private void Frm_ThemNhanVien_Load(object sender, EventArgs e)
         {
-
+            string s = Application.StartupPath;
+            //webBrowser1.Navigate(@"D:\A_HK1N3\Icon_Image_C#\hopdong.html");
+            webBrowser1.Navigate(s + "\\hopdong.html");
 
             if (!id_contract_edit1.Trim().Equals("") && !id_staff_edit1.Trim().Equals(""))
             {
@@ -103,12 +159,16 @@ namespace Presentation
                 list_jobtitle1 = cls_job_title_bus1.Get_list_job_title_BUS();
 
                 load_to_cmb(list_shift1, list_department1, list_jobtitle1);
+               
             }
 
 
 
 
         }
+
+     
+
         public void load_to_cmb(List<Cls_Shiff> list_shiff1, List<Cls_Department> list_department1, List<Cls_JobTitle> list_jobtitle)
         {
 
@@ -138,6 +198,8 @@ namespace Presentation
             txt_id_tk.Text = id_contract_edit1;
             txt_MaHD.Text = id_contract_edit1;
             txt_MNV.Text = id_staff_edit1;
+            txt_id_tk.ReadOnly = true;
+            txt_MaHD.ReadOnly = true;
             // phần hợp đồng
             txt_MaHD.Text = id_contract_edit1;
             txt_THD.Text = ct.Contract_name;
@@ -194,61 +256,68 @@ namespace Presentation
 
         private void btn_luuMoi_contract_Click(object sender, EventArgs e)
         {
-
-            bool a = check_contract();
-            if (a == true)
+            if (Cls_Validate_data.check_salary(txt_luong))
             {
-
-                Cls_Contract aa = new Cls_Contract();
-                aa.Id_contract = txt_MaHD.Text;
-                aa.Contract_name = txt_THD.Text;
-                aa.Id_shiff = cmb_TG.SelectedValue.ToString();
-                aa.Id_job = cmb_CVI.SelectedValue.ToString();
-                aa.Id_department = cmb_DPM.SelectedValue.ToString();
-                aa.Start_date = dt_ngaybatdau.Value;
-                if (txt_luong.Text.Trim().Equals("") != true)
+                bool a = check_contract();
+                if (a == true)
                 {
-                    aa.Salary = int.Parse(txt_luong.Text);
+
+                    Cls_Contract aa = new Cls_Contract();
+                    aa.Id_contract = txt_MaHD.Text;
+                    aa.Contract_name = txt_THD.Text;
+                    aa.Id_shiff = cmb_TG.SelectedValue.ToString();
+                    aa.Id_job = cmb_CVI.SelectedValue.ToString();
+                    aa.Id_department = cmb_DPM.SelectedValue.ToString();
+                    aa.Start_date = dt_ngaybatdau.Value;
+                    if (txt_luong.Text.Trim().Equals("") != true)
+                    {
+                        aa.Salary = int.Parse(txt_luong.Text);
+                    }
+                    else
+                    {
+                        aa.Salary = 0;
+                    }
+                    if (btn_luuMoi_contract.Text.Trim().ToLower().Equals("lưu mới một hợp đồng") == true)
+                    {
+                        if (cls_contract_bus1.InsertOnSubmit_Change_contract_BUS(aa) == true)
+                        {
+                            MessageBox.Show("Thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            grb_tt_nhanvien.Enabled = true;
+                            txt_MNV.Text = cls_staff_bus1.genaration_id_new_staff_BUS();
+                            grb_tt_hopdong.Enabled = false;
+                            grb_tt_taikhoan.Enabled = false;
+                            dtp_ngaysinh.CustomFormat = "dd-MM-yyyy";
+                            check_them_ct = true;
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else if (btn_luuMoi_contract.Text.Trim().ToLower().Equals("cập nhật hợp đồng") == true)
+                    {
+                        if (cls_contract_bus1.UpdateOnSubmitchange_contract_BUS(aa) == true)
+                        {
+                            MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thất bại, mười bạn nhập lại thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
                 else
                 {
-                    aa.Salary = 0;
-                }
-                if (btn_luuMoi_contract.Text.Trim().ToLower().Equals("lưu mới một hợp đồng") == true)
-                {
-                    if (cls_contract_bus1.InsertOnSubmit_Change_contract_BUS(aa) == true)
-                    {
-                        MessageBox.Show("Thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        grb_tt_nhanvien.Enabled = true;
-                        txt_MNV.Text = cls_staff_bus1.genaration_id_new_staff_BUS();
-                        grb_tt_hopdong.Enabled = false;
-                        grb_tt_taikhoan.Enabled = false;
-                        dtp_ngaysinh.CustomFormat = "dd-MM-yyyy";
-                        check_them_ct = true;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else if (btn_luuMoi_contract.Text.Trim().ToLower().Equals("cập nhật hợp đồng") == true)
-                {
-                    if (cls_contract_bus1.UpdateOnSubmitchange_contract_BUS(aa) == true)
-                    {
-                        MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Thất bại, mười bạn nhập lại thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Bạn chưa nhập đủ thông tin hớp đồng mời bạn nhập đày đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show("Bạn chưa nhập đủ thông tin hớp đồng mời bạn nhập đày đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa nhập đúng định dạng tiền lương", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+          
         }
 
         public bool check_staff()
@@ -263,54 +332,62 @@ namespace Presentation
 
         private void btn_luuMOINV_Click(object sender, EventArgs e)
         {
-            if (check_staff() == true)
+            if(Cls_Validate_data.check_email(txt_DiaChiEMAIL) && Cls_Validate_data.check_name_staff(txt_TNV) && Cls_Validate_data.validate_datetime("birthday",dtp_ngaysinh.Value.ToLongDateString(), DateTime.Today.ToLongDateString()))
             {
-                Cls_Staff staff_new = new Cls_Staff();
-                staff_new.Id_staff = txt_MNV.Text;
-                staff_new.Name = txt_TNV.Text;
-                staff_new.Phone = txt_SDT.Text;
-                staff_new.Mail = txt_DiaChiEMAIL.Text;
-                staff_new.Status_staff = true;
-                staff_new.Address = txt_DIACHI.Text;
-                if (ckb_gioitinh.Checked == true)
+                if (check_staff() == true)
                 {
-                    staff_new.Gender = "male";
-                }
-                else if (ckb_gioitinh.Checked == false)
-                {
-                    staff_new.Gender = "female";
-                }
-                staff_new.Birtday = dtp_ngaysinh.Value;
-                if (cls_staff_bus1.InsertOnSubmitChange_nhanvien_BUS(staff_new) == true)
-                {
-                    Cls_StaffContract st_ct = new Cls_StaffContract();
-                    st_ct.Id_contract = txt_MaHD.Text;
-                    st_ct.Id_staff = txt_MNV.Text;
-                    if (cls_staff_bus1.InsertOnsubmitChange_staff_contract_BUS(st_ct) == true)
+                    Cls_Staff staff_new = new Cls_Staff();
+                    staff_new.Id_staff = txt_MNV.Text;
+                    staff_new.Name = txt_TNV.Text;
+                    staff_new.Phone = txt_SDT.Text;
+                    staff_new.Mail = txt_DiaChiEMAIL.Text;
+                    staff_new.Status_staff = true;
+                    staff_new.Address = txt_DIACHI.Text;
+                    if (ckb_gioitinh.Checked == true)
                     {
-                        MessageBox.Show("Thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        grb_tt_hopdong.Enabled = false;
-                        grb_tt_nhanvien.Enabled = false;
-                        grb_tt_taikhoan.Enabled = true;
-                        txt_id_tk.Text = txt_MNV.Text;
-                        txt_id_tk.ReadOnly = true;
-                        cmb_quyenhan.DropDownStyle = ComboBoxStyle.DropDownList;
-                        string[] array_quyenhan = new string[5] { "Chọn quyền hạn", "admin", "hrstaff", "staff", "manager" };
-                        cmb_quyenhan.DataSource = array_quyenhan;
+                        staff_new.Gender = "male";
+                    }
+                    else if (ckb_gioitinh.Checked == false)
+                    {
+                        staff_new.Gender = "female";
+                    }
+                    staff_new.Birtday = dtp_ngaysinh.Value;
+                    if (cls_staff_bus1.InsertOnSubmitChange_nhanvien_BUS(staff_new) == true)
+                    {
+                        Cls_StaffContract st_ct = new Cls_StaffContract();
+                        st_ct.Id_contract = txt_MaHD.Text;
+                        st_ct.Id_staff = txt_MNV.Text;
+                        if (cls_staff_bus1.InsertOnsubmitChange_staff_contract_BUS(st_ct) == true)
+                        {
+                            MessageBox.Show("Thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            grb_tt_hopdong.Enabled = false;
+                            grb_tt_nhanvien.Enabled = false;
+                            grb_tt_taikhoan.Enabled = true;
+                            txt_id_tk.Text = txt_MNV.Text;
+                            txt_id_tk.ReadOnly = true;
+                            cmb_quyenhan.DropDownStyle = ComboBoxStyle.DropDownList;
+                            string[] array_quyenhan = new string[5] { "Chọn quyền hạn", "admin", "hrstaff", "staff", "manager" };
+                            cmb_quyenhan.DataSource = array_quyenhan;
 
-                        check_them_nv = true;
+                            check_them_nv = true;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thất bại ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Thất bại ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
 
-                MessageBox.Show("Bạn chưa nhập đủ thông tin nhân viên mời bạn nhập đày đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Bạn chưa nhập đủ thông tin nhân viên mời bạn nhập đày đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }else
+            {
+                MessageBox.Show("Nội dung nhập vào không đúng định dạng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+
 
         }
 
@@ -428,5 +505,7 @@ namespace Presentation
         //    list_jobtitle1 = cls_job_title_bus1.Get_list_job_title_BUS();
         //    load_to_cmb(list_shift1, list_department1, list_jobtitle1);
         //}
+
+        
     }
 }

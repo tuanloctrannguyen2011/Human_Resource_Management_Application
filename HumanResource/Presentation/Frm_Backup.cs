@@ -40,8 +40,11 @@ namespace Presentation
                     Database = txt_database.Text
                 };
                 DbBackup.Initialize = true;
-                DbBackup.Devices.AddDevice(@"D:\A_HK1N3\Phat_Trien_Ung_Dung\HumanResource_DA\Backup_data\"+txt_database.Text+".bak", DeviceType.File);
-                path_file = @"D:\A_HK1N3\Phat_Trien_Ung_Dung\HumanResource_DA\Backup_data\" + txt_database.Text +".bak";
+                //DbBackup.Devices.AddDevice(@"D:\A_HK1N3\Phat_Trien_Ung_Dung\HumanResource_DA\Backup_data\"+txt_database.Text+".bak", DeviceType.File);
+                //path_file = @"D:\A_HK1N3\Phat_Trien_Ung_Dung\HumanResource_DA\Backup_data\" + txt_database.Text +".bak";
+                DbBackup.Devices.AddDevice(@"D:\" + txt_database.Text + ".bak", DeviceType.File);
+
+                path_file = @"D:\" + txt_database.Text + ".bak";
                 DbBackup.PercentComplete += DbBackup_PercentComplete;
                 DbBackup.Complete += DbBackup_Complete;
                 DbBackup.SqlBackupAsync(DBserver);

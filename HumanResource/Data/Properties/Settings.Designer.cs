@@ -59,11 +59,21 @@ namespace Data.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-A59E3GV;Initial Catalog=HumanResource_V4;Persist Security Inf" +
-            "o=True;User ID=sa;Password=201198")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-A59E3GV;Initial Catalog=HumanResource_V4;Integrated Security=" +
+            "True")]
         public string HumanResource_V4ConnectionString1 {
             get {
                 return ((string)(this["HumanResource_V4ConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TUANLOC;Initial Catalog=HumanResource_V4;Integrated Security=True")]
+        public string HumanResource_V4ConnectionString2 {
+            get {
+                return ((string)(this["HumanResource_V4ConnectionString2"]));
             }
         }
     }

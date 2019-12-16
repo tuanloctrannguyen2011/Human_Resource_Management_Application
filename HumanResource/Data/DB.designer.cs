@@ -60,7 +60,7 @@ namespace Data
     #endregion
 		
 		public DBDataContext() : 
-				base(global::Data.Properties.Settings.Default.HumanResource_V4ConnectionString1, mappingSource)
+				base(global::Data.Properties.Settings.Default.HumanResource_V4ConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}

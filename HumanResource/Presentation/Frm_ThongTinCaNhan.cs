@@ -133,11 +133,29 @@ namespace Presentation
 
         private void btn_update_ttcn_Click(object sender, EventArgs e)
         {
-            btn_luu_thongtincapnhat.Enabled = true;
-            btn_update_ttcn.Enabled = false;
-            tbx_id.Enabled = false;
-            ckb_danglamviec.Enabled = false;
-            readonly_textbox(false);
+
+          
+            if (btn_update_ttcn.Text.Trim().ToLower().Equals("cập nhật thông tin"))
+            {
+                btn_update_ttcn.Text = "Hủy cập nhật thông tin";
+                btn_update_ttcn.Image = Presentation.Properties.Resources.icons8_cancel_64;
+                btn_luu_thongtincapnhat.Enabled = true;
+                tbx_id.Enabled = false;
+                ckb_danglamviec.Enabled = false;
+                readonly_textbox(false);
+            }
+            else if (btn_update_ttcn.Text.Trim().ToLower().Equals("hủy cập nhật thông tin"))
+            {
+
+                btn_update_ttcn.Text = "Cập nhật thông tin";
+                btn_update_ttcn.Image = Presentation.Properties.Resources.update;
+                btn_luu_thongtincapnhat.Enabled = false;
+                tbx_id.Enabled = false;
+                ckb_danglamviec.Enabled = false;
+                readonly_textbox(true);
+
+
+            }
         }
 
         private void btn_luu_thongtincapnhat_Click(object sender, EventArgs e)
@@ -169,6 +187,8 @@ namespace Presentation
                     MessageBox.Show("Thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     btn_luu_thongtincapnhat.Enabled = false;
                     btn_update_ttcn.Enabled = true;
+                    btn_update_ttcn.Text = "Cập nhật thông tin";
+                    btn_update_ttcn.Image = Presentation.Properties.Resources.update;
                     readonly_textbox(true);
                 }
             }

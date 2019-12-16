@@ -115,8 +115,8 @@ namespace Presentation
             a.ScrollBars = ScrollBars.Both;
             a.Columns["Id_dp"].ReadOnly = true;
             a.Columns["Name_dp"].ReadOnly = true;
-            a.Columns["Id_dp"].HeaderText = "Mã số phong ban";
-            a.Columns["Name_dp"].HeaderText = "Họ tên nhân viên";
+            a.Columns["Id_dp"].HeaderText = "Mã số phòng ban";
+            a.Columns["Name_dp"].HeaderText = "Tên phòng ban";
             for (int i = 0; i < a.Columns.Count; i++)
             {
                 a.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -186,12 +186,12 @@ namespace Presentation
                 }
                 else
                 {
-                    MessageBox.Show("Không tìm thấy bất kì kết quả nào phù hợp");
+                    MessageBox.Show("Không tìm thấy bất kì kết quả nào phù hợp","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show("Đảm bảo tiêu chí tìm kiếm và nội dùng tìm kiếm không rỗng");
+                MessageBox.Show("Đảm bảo tiêu chí tìm kiếm và nội dùng tìm kiếm không rỗng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
@@ -434,6 +434,17 @@ namespace Presentation
         {
             txt_id.Text = text_id;
             txt_name.Text = text_name;
+        }
+
+        private void toolStripButton_xem_toan_bo_phong_ban_Click(object sender, EventArgs e)
+        {
+            List<Cls_Department> l_dp = new List<Cls_Department>();
+            l_dp = cls_department_BUS1.Get_list_department_BUS();
+
+            load_to_gridview(l_dp,grv_department,bindingNavigator_department);
+            grv_Staff_of_department.Rows.Clear();
+            txt_Id_department.Text = "";
+            txt_name_department.Text = "";
         }
     }
 }

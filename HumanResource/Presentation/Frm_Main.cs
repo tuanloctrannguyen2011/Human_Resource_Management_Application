@@ -110,6 +110,7 @@ namespace Presentation
             myTabPage.Controls.Add(pnl);
             tabControl1.TabPages.Add(myTabPage);
             //tabPage1.Controls.Add(a);
+            tabControl1.SelectedIndex = tabControl1.SelectedIndex + 1;
 
         }
 
@@ -144,6 +145,7 @@ namespace Presentation
             tabControl1.Dock = DockStyle.Fill;
             string title = title_p + (tabControl1.TabCount + 1).ToString();
             TabPage myTabPage = new TabPage(title);
+            
             myTabPage.AutoScroll = true;
             
             Panel pnl = new Panel();
@@ -160,6 +162,9 @@ namespace Presentation
             a.Show();
             myTabPage.Controls.Add(pnl);
             tabControl1.TabPages.Add(myTabPage);
+            
+            tabControl1.SelectedIndex = tabControl1.SelectedIndex + 1;
+ 
 
             
         }
@@ -200,6 +205,7 @@ namespace Presentation
             a.Show();
             myTabPage.Controls.Add(pnl);
             tabControl1.TabPages.Add(myTabPage);
+            tabControl1.SelectedIndex = tabControl1.SelectedIndex + 1;
         }
 
         private void Btn_cancel_FRM_Restore_Click(object sender, EventArgs e)
@@ -244,8 +250,9 @@ namespace Presentation
             myTabPage.Controls.Add(pnl);
             tabControl1.TabPages.Add(myTabPage);
             //tabPage1.Controls.Add(a);
-            
-           
+            tabControl1.SelectedIndex = tabControl1.SelectedIndex + 1;
+
+
 
         }
 
@@ -346,7 +353,7 @@ namespace Presentation
         private void Btn_cancel_Click(object sender, EventArgs e)
         {
 
-            DialogResult rs = MessageBox.Show("bạn muốn thoát", "thông báo", MessageBoxButtons.YesNo);
+            DialogResult rs = MessageBox.Show("bạn muốn thoát", "thông báo", MessageBoxButtons.YesNo,MessageBoxIcon.Information);
             if (rs == DialogResult.Yes)
             {
                 this.DialogResult =DialogResult.Yes;
@@ -357,7 +364,7 @@ namespace Presentation
 
         private void Btn_exit_Click(object sender, EventArgs e)
         {
-            DialogResult rs = MessageBox.Show("Thay đổi thành công", "Bạn có muốn đăng xuất tài khoản?", MessageBoxButtons.YesNo);
+            DialogResult rs = MessageBox.Show("Bạn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (rs == DialogResult.Yes)
             {
                 tabControl1.TabPages.Remove(tabControl1.SelectedTab);
@@ -374,7 +381,7 @@ namespace Presentation
 
         private void Btn_exit_Click1(object sender, EventArgs e)
         {
-            DialogResult rs = MessageBox.Show("bạn muốn thoát", "thông báo", MessageBoxButtons.YesNo);
+            DialogResult rs = MessageBox.Show("bạn muốn thoát", "thông báo", MessageBoxButtons.YesNo,MessageBoxIcon.Information);
             if (rs == DialogResult.Yes)
             {
                 tabControl1.TabPages.Remove(tabControl1.SelectedTab);
@@ -392,7 +399,7 @@ namespace Presentation
 
         private void Btn_exit_Click2(object sender, EventArgs e)
         {
-            DialogResult rs = MessageBox.Show("bạn muốn thoát", "thông báo", MessageBoxButtons.YesNo);
+            DialogResult rs = MessageBox.Show("bạn muốn thoát", "thông báo", MessageBoxButtons.YesNo,MessageBoxIcon.Information);
             if (rs == DialogResult.Yes)
             {
                 //this.DialogResult = DialogResult.Yes;
@@ -410,7 +417,7 @@ namespace Presentation
 
         private void Btn_cancel_form_ttcn_Click(object sender, EventArgs e)
         {
-            DialogResult rs = MessageBox.Show("bạn muốn thoát", "thông báo", MessageBoxButtons.YesNo);
+            DialogResult rs = MessageBox.Show("bạn muốn thoát", "thông báo", MessageBoxButtons.YesNo,MessageBoxIcon.Information);
             if (rs == DialogResult.Yes)
             {
                 tabControl1.TabPages.Remove(tabControl1.SelectedTab);
@@ -430,7 +437,7 @@ namespace Presentation
         private void Btn_exit_Click3(object sender, EventArgs e)
         {
 
-            DialogResult rs = MessageBox.Show("bạn muốn thoát", "thông báo", MessageBoxButtons.YesNo);
+            DialogResult rs = MessageBox.Show("bạn muốn thoát", "thông báo", MessageBoxButtons.YesNo,MessageBoxIcon.Information);
             if (rs == DialogResult.Yes)
             {
                 tabControl1.TabPages.Remove(tabControl1.SelectedTab);
@@ -447,7 +454,7 @@ namespace Presentation
 
         private void Btn_exit_Click4(object sender, EventArgs e)
         {
-            DialogResult rs = MessageBox.Show("bạn muốn thoát", "thông báo", MessageBoxButtons.YesNo);
+            DialogResult rs = MessageBox.Show("bạn muốn thoát", "thông báo", MessageBoxButtons.YesNo,MessageBoxIcon.Information);
             if (rs == DialogResult.Yes)
             {
                 tabControl1.TabPages.Remove(tabControl1.SelectedTab);
@@ -460,6 +467,11 @@ namespace Presentation
             Frm_PhongBan frm_pb = new Frm_PhongBan();
             Embed_form2(frm_pb, "Thêm mới một nhân viên ");
             frm_pb.btn_Cancel_ThemPhongBan.Click += Btn_Cancel_ThemPhongBan_Click;
+        }
+
+        private void hướngDẫnSửDụngPhậnMềmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, System.IO.Path.Combine(Application.StartupPath, "HDSD.chm"));
         }
     }
 }

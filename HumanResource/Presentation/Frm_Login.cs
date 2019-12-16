@@ -25,15 +25,15 @@ namespace Presentation
         {
             if (txb_Login.Text.Trim() == "" && txb_Password.Text.Trim() != "")
             {
-                MessageBox.Show("mời bạn nhập vào ID đăng nhập");
+                MessageBox.Show("mời bạn nhập vào ID đăng nhập","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             else if (txb_Login.Text.Trim() != "" && txb_Password.Text.Trim() == "")
             {
-                MessageBox.Show("mời bạn nhập vào password đăng nhập");
+                MessageBox.Show("mời bạn nhập vào password đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (txb_Login.Text.Trim() == "" && txb_Password.Text.Trim() == "")
             {
-                MessageBox.Show("mời bạn nhập vào id và password đăng nhập");
+                MessageBox.Show("mời bạn nhập vào id và password đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (txb_Login.Text.Trim() != "" && txb_Password.Text.Trim() != "")
             {
@@ -47,15 +47,15 @@ namespace Presentation
 
                 if (check_id == false && check_ps == false)
                 {
-                    MessageBox.Show("bạn nhậm sai ID và PASSWORD");
+                    MessageBox.Show("bạn nhậm sai ID hoặc PASSWORD", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (check_id == false && check_ps == true)
                 {
-                    MessageBox.Show("Bạn nhập sai ID ");
+                    MessageBox.Show("Bạn nhập sai ID ","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (check_id == true && check_ps == false)
                 {
-                    MessageBox.Show("Bạn nhập sai PASS ");
+                    MessageBox.Show("Bạn nhập sai PASSWORD ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (check_id == true && check_ps == true)
                 {
@@ -67,7 +67,7 @@ namespace Presentation
                     }
                     else
                     {
-                        MessageBox.Show("tài khoản này đã bị vô hiệu hóa");
+                        MessageBox.Show("tài khoản này đã bị vô hiệu hóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
 
@@ -75,5 +75,21 @@ namespace Presentation
 
             }
         }
+
+        private void ptb_view_pass_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txb_Password.PasswordChar == (char)'*')
+            {
+                txb_Password.PasswordChar = (char)0;
+                ptb_view_pass.Image = Presentation.Properties.Resources.view_pass;
+            }
+            else
+            {
+                txb_Password.PasswordChar = Convert.ToChar("*");
+                ptb_view_pass.Image = Presentation.Properties.Resources.hiden_pass;
+            }
+        }
+
+       
     }
 }

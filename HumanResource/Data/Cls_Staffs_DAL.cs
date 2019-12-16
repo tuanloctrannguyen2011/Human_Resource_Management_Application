@@ -37,6 +37,26 @@ namespace Data
             return list_staff;
         }
 
+        public List<Cls_Staff> Get_list_staff_load_form(string id_curent)
+        {
+
+            List<Cls_Staff> list_staff = new List<Cls_Staff>();
+            IEnumerable<Staff> a = DB.Staffs.Where(x=>x.staff_id.Trim().Equals(id_curent.Trim())==false).ToList<Staff>();
+            foreach (Staff x in a)
+            {
+                Cls_Staff x1 = new Cls_Staff();
+                x1.Address = x.staff_address;
+                x1.Id_staff = x.staff_id;
+                x1.Mail = x.staff_mail;
+                x1.Name = x.staff_name;
+                x1.Phone = x.staff_phoneNo;
+                x1.Status_staff = x.staff_status;
+                list_staff.Add(x1);
+            }
+
+            return list_staff;
+        }
+
         public List<Cls_Staff> Get_list_staffs_Active(string id_curent)
         {
             List<Cls_Staff> list_staff_active = new List<Cls_Staff>();

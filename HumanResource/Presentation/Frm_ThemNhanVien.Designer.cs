@@ -365,7 +365,7 @@
             this.grb_tt_nhanvien.Size = new System.Drawing.Size(637, 442);
             this.grb_tt_nhanvien.TabIndex = 0;
             this.grb_tt_nhanvien.TabStop = false;
-            this.grb_tt_nhanvien.Text = "Thồn tin tài nhân viên";
+            this.grb_tt_nhanvien.Text = "Thông tin nhân viên";
             // 
             // ckb_gioitinh
             // 
@@ -584,7 +584,7 @@
             this.ClientSize = new System.Drawing.Size(1222, 634);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Frm_ThemNhanVien";
-            this.Text = "Frm_ThemNhanVien";
+            this.Text = "Nhân viên";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_ThemNhanVien_FormClosing);
             this.Load += new System.EventHandler(this.Frm_ThemNhanVien_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);

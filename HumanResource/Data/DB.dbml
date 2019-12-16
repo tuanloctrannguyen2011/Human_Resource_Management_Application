@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HumanResource_V4" Class="DBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-A59E3GV;Initial Catalog=HumanResource_V4;Persist Security Info=True;User ID=sa" SettingsObjectName="Data.Properties.Settings" SettingsPropertyName="HumanResource_V4ConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=TUANLOC;Initial Catalog=HumanResource_V4;Integrated Security=True" SettingsObjectName="Data.Properties.Settings" SettingsPropertyName="HumanResource_V4ConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Account" Member="Accounts">
     <Type Name="Account">
       <Column Name="acc_id" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

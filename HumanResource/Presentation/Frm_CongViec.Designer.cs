@@ -31,15 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CongViec));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.small_iamge = new System.Windows.Forms.ImageList(this.components);
-            this.large_image = new System.Windows.Forms.ImageList(this.components);
             this.gardient_Panel1 = new Presentation.Gardient_Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_exit = new System.Windows.Forms.Button();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.gardient_Panel3 = new Presentation.Gardient_Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lsv_CongViec = new System.Windows.Forms.ListView();
@@ -60,6 +56,7 @@
             this.tsp_btn_sua = new System.Windows.Forms.ToolStripButton();
             this.tsp_btn_xoa = new System.Windows.Forms.ToolStripButton();
             this.tsp_btn_luu = new System.Windows.Forms.ToolStripButton();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.gardient_Panel2 = new Presentation.Gardient_Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
@@ -70,10 +67,14 @@
             this.Grb_MoTaCV = new System.Windows.Forms.GroupBox();
             this.rTb_MoTa = new System.Windows.Forms.RichTextBox();
             this.btn_luu_dg = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.small_iamge = new System.Windows.Forms.ImageList(this.components);
+            this.large_image = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.gardient_Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -82,7 +83,6 @@
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            this.gardient_Panel1.SuspendLayout();
             this.gardient_Panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gardient_Panel4.SuspendLayout();
@@ -113,6 +113,46 @@
             this.splitContainer1.Size = new System.Drawing.Size(1370, 604);
             this.splitContainer1.SplitterDistance = 35;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // gardient_Panel1
+            // 
+            this.gardient_Panel1.Angle = 0F;
+            this.gardient_Panel1.BottomColor = System.Drawing.Color.DeepSkyBlue;
+            this.gardient_Panel1.Controls.Add(this.label1);
+            this.gardient_Panel1.Controls.Add(this.btn_exit);
+            this.gardient_Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gardient_Panel1.Location = new System.Drawing.Point(0, 0);
+            this.gardient_Panel1.Name = "gardient_Panel1";
+            this.gardient_Panel1.Size = new System.Drawing.Size(1370, 35);
+            this.gardient_Panel1.TabIndex = 1;
+            this.gardient_Panel1.TopColor = System.Drawing.Color.White;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1326, 35);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Công việc";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_exit
+            // 
+            this.btn_exit.BackColor = System.Drawing.Color.Red;
+            this.btn_exit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_exit.FlatAppearance.BorderSize = 0;
+            this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit.ForeColor = System.Drawing.Color.White;
+            this.btn_exit.Location = new System.Drawing.Point(1326, 0);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(44, 35);
+            this.btn_exit.TabIndex = 6;
+            this.btn_exit.Text = "X";
+            this.btn_exit.UseVisualStyleBackColor = false;
             // 
             // splitContainer2
             // 
@@ -149,71 +189,6 @@
             this.splitContainer3.Size = new System.Drawing.Size(800, 565);
             this.splitContainer3.SplitterDistance = 436;
             this.splitContainer3.TabIndex = 1;
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 565);
-            this.splitter1.TabIndex = 0;
-            this.splitter1.TabStop = false;
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            // 
-            // small_iamge
-            // 
-            this.small_iamge.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("small_iamge.ImageStream")));
-            this.small_iamge.TransparentColor = System.Drawing.Color.Transparent;
-            this.small_iamge.Images.SetKeyName(0, "job.png");
-            // 
-            // large_image
-            // 
-            this.large_image.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("large_image.ImageStream")));
-            this.large_image.TransparentColor = System.Drawing.Color.Transparent;
-            this.large_image.Images.SetKeyName(0, "goals.png");
-            // 
-            // gardient_Panel1
-            // 
-            this.gardient_Panel1.Angle = 0F;
-            this.gardient_Panel1.BottomColor = System.Drawing.Color.DeepSkyBlue;
-            this.gardient_Panel1.Controls.Add(this.label1);
-            this.gardient_Panel1.Controls.Add(this.btn_exit);
-            this.gardient_Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gardient_Panel1.Location = new System.Drawing.Point(0, 0);
-            this.gardient_Panel1.Name = "gardient_Panel1";
-            this.gardient_Panel1.Size = new System.Drawing.Size(1370, 35);
-            this.gardient_Panel1.TabIndex = 1;
-            this.gardient_Panel1.TopColor = System.Drawing.Color.White;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1326, 35);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Đánh giá";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_exit
-            // 
-            this.btn_exit.BackColor = System.Drawing.Color.Red;
-            this.btn_exit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_exit.FlatAppearance.BorderSize = 0;
-            this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exit.ForeColor = System.Drawing.Color.White;
-            this.btn_exit.Location = new System.Drawing.Point(1326, 0);
-            this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(44, 35);
-            this.btn_exit.TabIndex = 6;
-            this.btn_exit.Text = "X";
-            this.btn_exit.UseVisualStyleBackColor = false;
             // 
             // gardient_Panel3
             // 
@@ -418,6 +393,14 @@
             this.tsp_btn_luu.ToolTipText = "Lưu công việc";
             this.tsp_btn_luu.Click += new System.EventHandler(this.tsp_btn_luu_Click);
             // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(3, 565);
+            this.splitter1.TabIndex = 0;
+            this.splitter1.TabStop = false;
+            // 
             // gardient_Panel2
             // 
             this.gardient_Panel2.Angle = 0F;
@@ -532,6 +515,23 @@
             this.btn_luu_dg.Text = "Lưu đánh giá";
             this.btn_luu_dg.UseVisualStyleBackColor = true;
             // 
+            // toolTip1
+            // 
+            this.toolTip1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // small_iamge
+            // 
+            this.small_iamge.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("small_iamge.ImageStream")));
+            this.small_iamge.TransparentColor = System.Drawing.Color.Transparent;
+            this.small_iamge.Images.SetKeyName(0, "job.png");
+            // 
+            // large_image
+            // 
+            this.large_image.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("large_image.ImageStream")));
+            this.large_image.TransparentColor = System.Drawing.Color.Transparent;
+            this.large_image.Images.SetKeyName(0, "goals.png");
+            // 
             // Frm_CongViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -539,12 +539,13 @@
             this.ClientSize = new System.Drawing.Size(1370, 604);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Frm_CongViec";
-            this.Text = "Frm_Danhgia";
+            this.Text = "Frm_CongViec";
             this.Load += new System.EventHandler(this.Frm_Danhgia_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.gardient_Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
@@ -553,7 +554,6 @@
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            this.gardient_Panel1.ResumeLayout(false);
             this.gardient_Panel3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.gardient_Panel4.ResumeLayout(false);

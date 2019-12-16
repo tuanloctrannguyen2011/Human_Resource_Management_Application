@@ -84,6 +84,7 @@
     <Compile Include="Button_HinhTron.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Cls_Validate_data.cs" />
     <Compile Include="Frm_Backup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +262,7 @@
     <Content Include="Images\Global-Manager-icon.png" />
     <Content Include="Images\goals.png" />
     <Content Include="Images\help.png" />
+    <Content Include="Resources\hiden_pass.png" />
     <Content Include="Images\iamge_child.png" />
     <Content Include="Images\iamge_root.png" />
     <Content Include="Images\icons8-add-property-64.png" />
@@ -293,6 +295,8 @@
     <Content Include="Images\System-settings-icon.png" />
     <Content Include="Images\System.png" />
     <Content Include="Images\update.png" />
+    <None Include="Resources\hopdong.html" />
+    <Content Include="Resources\view-pass.png" />
     <None Include="Resources\icon_cancel.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

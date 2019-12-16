@@ -32,7 +32,9 @@ namespace Presentation
                     NoRecovery = false
                 };
 
-                DbRestore.Devices.AddDevice(@"D:\A_HK1N3\Phat_Trien_Ung_Dung\HumanResource_DA\Backup_data\"+txt_database.Text+".bak", DeviceType.File);
+                //DbRestore.Devices.AddDevice(@"D:\A_HK1N3\Phat_Trien_Ung_Dung\HumanResource_DA\Backup_data\"+txt_database.Text+".bak", DeviceType.File);
+                DbRestore.Devices.AddDevice(@"D:\" + txt_database.Text + ".bak", DeviceType.File);
+
                 DbRestore.PercentComplete += DbRestore_PercentComplete;
                 DbRestore.Complete += DbRestore_Complete;
                 DbRestore.SqlRestoreAsync(DBserver);

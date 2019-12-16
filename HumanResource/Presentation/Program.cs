@@ -56,7 +56,7 @@ namespace Presentation
             //}
 
             #endregion
-            //Application.Run(new Frm_Danhgia());
+            //Application.Run(new Frm_ThemNhanVien());
         }
     }
 }

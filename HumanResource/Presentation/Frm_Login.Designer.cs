@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Login));
             this.txb_Password = new System.Windows.Forms.TextBox();
             this.txb_Login = new System.Windows.Forms.TextBox();
             this.ptB_Pass = new System.Windows.Forms.PictureBox();
@@ -35,9 +36,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_Login = new Presentation.Button_HinhTron();
             this.btn_Caneldn = new Presentation.Button_HinhTron();
+            this.ptb_view_pass = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptB_Pass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_ID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_view_pass)).BeginInit();
             this.SuspendLayout();
             // 
             // txb_Password
@@ -45,11 +48,11 @@
             this.txb_Password.BackColor = System.Drawing.Color.SkyBlue;
             this.txb_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_Password.ForeColor = System.Drawing.SystemColors.Info;
-            this.txb_Password.Location = new System.Drawing.Point(80, 234);
+            this.txb_Password.Location = new System.Drawing.Point(80, 228);
             this.txb_Password.Multiline = true;
             this.txb_Password.Name = "txb_Password";
             this.txb_Password.PasswordChar = '*';
-            this.txb_Password.Size = new System.Drawing.Size(327, 30);
+            this.txb_Password.Size = new System.Drawing.Size(305, 30);
             this.txb_Password.TabIndex = 15;
             this.txb_Password.Text = "qwerty";
             // 
@@ -61,7 +64,7 @@
             this.txb_Login.Location = new System.Drawing.Point(80, 186);
             this.txb_Login.Multiline = true;
             this.txb_Login.Name = "txb_Login";
-            this.txb_Login.Size = new System.Drawing.Size(327, 30);
+            this.txb_Login.Size = new System.Drawing.Size(338, 30);
             this.txb_Login.TabIndex = 14;
             this.txb_Login.Text = "0000000015";
             // 
@@ -117,6 +120,17 @@
             this.btn_Caneldn.TabIndex = 17;
             this.btn_Caneldn.UseVisualStyleBackColor = true;
             // 
+            // ptb_view_pass
+            // 
+            this.ptb_view_pass.Image = ((System.Drawing.Image)(resources.GetObject("ptb_view_pass.Image")));
+            this.ptb_view_pass.Location = new System.Drawing.Point(384, 228);
+            this.ptb_view_pass.Name = "ptb_view_pass";
+            this.ptb_view_pass.Size = new System.Drawing.Size(34, 30);
+            this.ptb_view_pass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptb_view_pass.TabIndex = 18;
+            this.ptb_view_pass.TabStop = false;
+            this.ptb_view_pass.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ptb_view_pass_MouseClick);
+            // 
             // Frm_Login
             // 
             this.AcceptButton = this.btn_Login;
@@ -124,19 +138,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Presentation.Properties.Resources.line_background_band_light_69088_1280x1024;
             this.CancelButton = this.btn_Caneldn;
-            this.ClientSize = new System.Drawing.Size(440, 384);
+            this.ClientSize = new System.Drawing.Size(449, 400);
+            this.Controls.Add(this.ptb_view_pass);
+            this.Controls.Add(this.txb_Password);
             this.Controls.Add(this.btn_Caneldn);
             this.Controls.Add(this.btn_Login);
-            this.Controls.Add(this.txb_Password);
             this.Controls.Add(this.txb_Login);
             this.Controls.Add(this.ptB_Pass);
             this.Controls.Add(this.ptb_ID);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Frm_Login";
-            this.Text = "Frm_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Đăng nhập";
             ((System.ComponentModel.ISupportInitialize)(this.ptB_Pass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_ID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_view_pass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,5 +168,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Button_HinhTron btn_Login;
         private Button_HinhTron btn_Caneldn;
+        private System.Windows.Forms.PictureBox ptb_view_pass;
     }
 }

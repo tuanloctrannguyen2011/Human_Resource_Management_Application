@@ -206,5 +206,10 @@ namespace Business
         {
             return cls_staffs_DAL1.result_staff(option,content);
         }
+
+        public List<Cls_Staff> Get_list_staff_load_form_BUS(string id_curent)
+        {
+            return cls_staffs_DAL1.Get_list_staff_load_form(id_curent);
+        }
     }
 }

@@ -31,18 +31,28 @@ namespace Presentation
 
 
         }
+        Cls_Account acc_current = new Cls_Account();
         public Frm_ThongTinPhongBan(Cls_Account cls_acc)
         {
             InitializeComponent();
             id_curent = cls_acc.Id_acc;
             innit_account = cls_acc;
             LoadFilterToCombox();
+            acc_current = cls_acc;
 
 
         }
 
         private void Frm_ThongTinPhongBan_Load(object sender, EventArgs e)
         {
+            if (acc_current.Role_name.Trim().Equals("hrstaff"))
+            {
+                lbl_title.Text = "Nhân viên";
+            }
+            else
+            {
+                lbl_title.Text = "Phòng ban";
+            }
             tvw_department.ImageList = imageList_tree;
 
             l_dp = cls_dpm_bus1.Get_list_department_BUS();
@@ -130,7 +140,7 @@ namespace Presentation
             //CheckBox tinh_trang = new CheckBox();
             //tinh_trang.Checked = false;
             lsv.Items.Clear();
-            int i = 0;
+            int i = 1;
             foreach (Cls_Staff a in l_st)
             {
                 ListViewItem item = new ListViewItem(new[] { i.ToString(), a.Id_staff, a.Name, a.Phone, a.Mail, a.Gender, a.Birtday.ToShortDateString(), a.Address, a.Status_staff.ToString() });
@@ -187,7 +197,7 @@ namespace Presentation
         private void tênPhòngBanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             toolStripComboBox_option_search.Text = tênPhòngBanToolStripMenuItem.Text;
-            toolStripTextBox_content_search.Text = "Nhập tên phong ban";
+            toolStripTextBox_content_search.Text = "Nhập tên phòng ban";
             toolStripTextBox_content_search.ForeColor = Color.Red;
             string[] auto = Get_array_auto("phòng ban", toolStripComboBox_option_search.Text, tvw_department);
             auto_complet_search("phòng ban", toolStripComboBox_option_search.Text, auto);
@@ -450,7 +460,7 @@ namespace Presentation
         private void mãSốNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             toolStripComboBox_option_search_nv.Text = "Mã số nhân viên";
-            toolStripTextBox_content_search_nv.Text = "Nhập Mã số phòng ban";
+            toolStripTextBox_content_search_nv.Text = "Nhập Mã số nhân viên";
             toolStripTextBox_content_search_nv.ForeColor = Color.Red;
 
 
@@ -477,7 +487,7 @@ namespace Presentation
             }
             else
             {
-                MessageBox.Show("mời bạn chọn phong ban muốn xem thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("mời bạn chọn phòng ban muốn xem thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         public void clear_textbox(string type_textbox)
